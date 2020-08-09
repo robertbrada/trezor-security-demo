@@ -1,8 +1,12 @@
+/**
+ * Component that represents SVG icon of a successful PIN creation
+ */
+
 import React from 'react';
 
 function PinOkIcon(props: {}) {
     return (
-        <svg viewBox="0 0 59.566505 59.566505" width="50px" {...props}>
+        <svg viewBox="0 0 59.566505 59.566505" width="48px" {...props}>
             <g transform="translate(176.08165,-63.70079)">
                 <path
                     fill="#00aa00f"

@@ -1,14 +1,16 @@
+/**
+ * Component that tells the user to create a PIN for his Trezor device
+ * Component has two basic states:
+ *   1) Show button to set the PIN
+ *   2) PIN was successfully created
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import PinIcon from '../../svg/PinIcon';
 import PinOkIcon from '../../svg/PinOkIcon';
 
-type State = {
-    pinSet: boolean;
-    showPIN: boolean;
-    pin: number;
-};
-
+// styled-components code
 interface StyleProps {
     pinSet: boolean;
 }
@@ -30,7 +32,6 @@ const SetPinButton = styled(Button)`
 
     &:hover {
         color: white;
-
         background-color: #00aa00;
     }
 `;
@@ -54,13 +55,8 @@ const Card = styled.div`
     background-color: white;
     border-radius: 10px;
     width: 195px;
-    // height: 280px;
     vertical-align: top;
     max-width: 250px;
-
-    // -webkit-box-shadow: 3px 3px 5px 0px rgba(69, 90, 100, 0.19);
-    // -moz-box-shadow: 3px 3px 5px 0px rgba(69, 90, 100, 0.19);
-    // box-shadow: 3px 3px 5px 0px rgba(69, 90, 100, 0.19);
 `;
 
 const IconWrapper = styled.div`
@@ -92,7 +88,7 @@ const Description = styled.div`
     font-weight: light;
 `;
 
-const Line = styled.hr`
+const VerticalLine = styled.hr`
     display: block;
     margin-top: 1.2em;
     margin-bottom: 0.4em;
@@ -101,10 +97,16 @@ const Line = styled.hr`
     border-top: 2px solid #eceff1;
 `;
 
+type State = {
+    pinSet: boolean;
+    showPin: boolean;
+    pin: number;
+};
+
 export class SecurityCard extends React.Component<{}, State> {
     readonly state: State = {
         pinSet: false,
-        showPIN: false,
+        showPin: false,
         pin: 123456,
     };
 
@@ -113,7 +115,7 @@ export class SecurityCard extends React.Component<{}, State> {
     };
 
     showPinHandler = () => {
-        this.setState({ showPIN: true });
+        this.setState({ showPin: true });
     };
 
     render() {
@@ -121,8 +123,9 @@ export class SecurityCard extends React.Component<{}, State> {
         const { pinSet } = this.state;
         let icon, headline, description, button;
 
+        // render the content depending on the value of 'pinSet' variable
         if (pinSet) {
-            // set the variable values in case the PIN was created successfully
+            // PIN was created successfully
             icon = <PinOkIcon />;
             headline = 'PIN code created successfully!';
             description = '';
@@ -132,7 +135,7 @@ export class SecurityCard extends React.Component<{}, State> {
                 </ShowPinButton>
             );
         } else {
-            // set the variable values for the case that PIN was not created yet
+            // PIN was not created yet
             icon = <PinIcon />;
             headline = 'Set PIN code';
             description = 'Set a strong PIN to prevent unauthorized access';
@@ -145,13 +148,11 @@ export class SecurityCard extends React.Component<{}, State> {
 
         return (
             <Card>
-                <>
-                    <IconWrapper pinSet={pinSet}>{icon}</IconWrapper>
-                    <Headline>{headline}</Headline>
-                    <Description>{description}</Description>
-                    <Line />
-                    {button}
-                </>
+                <IconWrapper pinSet={pinSet}>{icon}</IconWrapper>
+                <Headline>{headline}</Headline>
+                <Description>{description}</Description>
+                <VerticalLine />
+                {button}
             </Card>
         );
     }
