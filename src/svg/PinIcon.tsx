@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface Props {
-    fill: any;
-}
-
-function PinIcon(props: Props) {
+function PinIcon(props: {}) {
     return (
         <svg viewBox="0 0 59.566505 59.566505" width="50px" {...props}>
             <g transform="translate(-107.78635,-50.768627)">

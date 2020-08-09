@@ -1,9 +1,6 @@
 :root {
-  --main: #48dbb4;
-  --blue: #0079ff;
   --grey: #859096;
   --custom-black: #263238;
-  --green: #48c764;
   --footer-height: 60px;
   --body-top-margin: 60px;
   --body-bottom-margin: 50px;
@@ -13,51 +10,16 @@
 body {
   color:var(--custom-black);
   background: #eceff1 radial-gradient(at 50% 55%, #d6dae0, #fff) no-repeat;
-  /*background-color: #f2f2f6;*/
   background-size: auto;
   margin: var(--body-top-margin) var(--body-side-margin)  var(--body-bottom-margin)  var(--body-side-margin);
   min-height: calc(100vh - var(--body-top-margin) - var(--body-bottom-margin));
 
 }
 
-
 .App {
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Trezor - Demo",
+  "name": "App built during Satoshilabs hiring process",
   "icons": [
     {
       "src": "favicon.ico",

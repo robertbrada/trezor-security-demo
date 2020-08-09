@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 
-import Security from './components/Security';
+import SecurityCard from './components/SecurityCard/SecurityCard';
 
 const StepHeadline = styled.div`
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 2.5em;
     color: #263238;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 2.5em;
 `;
 
 const Wrapper = styled.div`
@@ -27,12 +27,12 @@ const Wrapper = styled.div`
 function App() {
     return (
         <div className="App">
-            <StepHeadline>Secure your Trezor 3/4</StepHeadline>
             <Wrapper>
-                <Security />
-                <Security />
-                <Security />
-                <Security />
+                <StepHeadline>Secure your Trezor 3/4</StepHeadline>
+                <SecurityCard />
+                <SecurityCard />
+                <SecurityCard />
+                <SecurityCard />
             </Wrapper>
         </div>
     );

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import PinIcon from '../svg/PinIcon';
-import PinOkIcon from '../svg/PinOkIcon';
+import PinIcon from '../../svg/PinIcon';
+import PinOkIcon from '../../svg/PinOkIcon';
 
 type State = {
     pinSet: boolean;
@@ -14,7 +14,6 @@ interface StyleProps {
 }
 
 const Button = styled.button`
-    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     border-radius: 3px;
@@ -26,35 +25,36 @@ const Button = styled.button`
 
 const SetPinButton = styled(Button)`
     color: #00aa00;
-    border-color: #00aa00;
     background-color: white;
+    border-color: #00aa00;
 
     &:hover {
-        background-color: #00aa00;
         color: white;
+
+        background-color: #00aa00;
     }
 `;
 
 const ShowPinButton = styled(Button)`
     color: black;
-    border-color: black;
     background-color: white;
+    border-color: black;
 
     &:hover {
-        background-color: black;
         color: white;
+        background-color: black;
     }
 `;
 
-const SecurityCard = styled.div`
+const Card = styled.div`
     display: inline-block;
     margin: 20px;
-    padding: 20px;
+    padding: 25px 15px;
     border: 1px solid #d7d9de;
     background-color: white;
     border-radius: 10px;
-    width: 180px;
-    height: 240px;
+    width: 195px;
+    // height: 280px;
     vertical-align: top;
     max-width: 250px;
 
@@ -66,8 +66,8 @@ const SecurityCard = styled.div`
 const IconWrapper = styled.div`
     display: block;
     margin: 0 auto;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     border-radius: 100%;
     border: 3px solid black;
     // border: ${(props: StyleProps) => (props.pinSet ? '3px solid #00aa00' : '3px solid black')};
@@ -83,13 +83,13 @@ const IconWrapper = styled.div`
 
 const Headline = styled.div`
     font-weight: 500;
-    font-size: 17px;
-    margin-bottom: 0.5em;
+    font-size: 18px;
+    margin-bottom: 0.6em;
 `;
 
 const Description = styled.div`
-    font-weight: light;
     color: #859096;
+    font-weight: light;
 `;
 
 const Line = styled.hr`
@@ -101,7 +101,7 @@ const Line = styled.hr`
     border-top: 2px solid #eceff1;
 `;
 
-export class Security extends React.Component<{}, State> {
+export class SecurityCard extends React.Component<{}, State> {
     readonly state: State = {
         pinSet: false,
         showPIN: false,
@@ -109,7 +109,6 @@ export class Security extends React.Component<{}, State> {
     };
 
     setPinHandler = () => {
-        // TODO set PIN to state variable
         this.setState({ pinSet: true });
     };
 
@@ -118,42 +117,44 @@ export class Security extends React.Component<{}, State> {
     };
 
     render() {
+        // declare variables that we will use
         const { pinSet } = this.state;
-        let content;
+        let icon, headline, description, button;
 
         if (pinSet) {
-            content = (
-                <>
-                    <IconWrapper pinSet={true}>
-                        <PinOkIcon />
-                    </IconWrapper>
-                    <Headline>PIN code created successfully!</Headline>
-                    <Line />
-                    <ShowPinButton type="button" onClick={this.showPinHandler}>
-                        View PIN
-                    </ShowPinButton>
-                </>
+            // set the variable values in case the PIN was created successfully
+            icon = <PinOkIcon />;
+            headline = 'PIN code created successfully!';
+            description = '';
+            button = (
+                <ShowPinButton type="button" onClick={this.showPinHandler}>
+                    View PIN
+                </ShowPinButton>
             );
         } else {
-            content = (
-                <>
-                    <IconWrapper pinSet={false}>
-                        <PinIcon fill="#000" />
-                    </IconWrapper>
-
-                    <Headline>Set your PIN code</Headline>
-                    <Description>Set a strong PIN number</Description>
-                    <Line />
-
-                    <SetPinButton type="button" onClick={this.setPinHandler}>
-                        Set PIN
-                    </SetPinButton>
-                </>
+            // set the variable values for the case that PIN was not created yet
+            icon = <PinIcon />;
+            headline = 'Set PIN code';
+            description = 'Set a strong PIN to prevent unauthorized access';
+            button = (
+                <SetPinButton type="button" onClick={this.setPinHandler}>
+                    Set PIN
+                </SetPinButton>
             );
         }
 
-        return <SecurityCard>{content}</SecurityCard>;
+        return (
+            <Card>
+                <>
+                    <IconWrapper pinSet={pinSet}>{icon}</IconWrapper>
+                    <Headline>{headline}</Headline>
+                    <Description>{description}</Description>
+                    <Line />
+                    {button}
+                </>
+            </Card>
+        );
     }
 }
 
-export default Security;
+export default SecurityCard;
