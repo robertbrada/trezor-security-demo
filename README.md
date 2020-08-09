@@ -1,5 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This project show example GUI for [Trezor](https://trezor.io/) wallet users. 
+The project was built using React and Typescript.
 
+## Installation
+
+1. Clone the project:
+    ```bash
+    git clone https://github.com/robertbrada/trezor-security-demo.git
+    ```
+
+2. Enter the directory and install the dependencies:
+    ```bash
+    cd trezor-security-demo
+    npm install
+    ```
+   
+3. Run the server and open http://localhost:3000 to view it in the browser:
+    ```bash
+    npm run start
+    ```
+   
 ## Available Scripts
 
 In the project directory, you can run:
