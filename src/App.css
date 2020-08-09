@@ -1,3 +1,11 @@
+body {
+  color: #263238;
+  background: #eceff1 radial-gradient(at 50% 55%, #d6dae0, #fff) no-repeat;
+  background-size: auto;
+  min-height: 100vh;
+}
+
+
 .App {
   text-align: center;
 }
