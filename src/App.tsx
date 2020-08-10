@@ -3,41 +3,49 @@ import './App.css';
 import styled from 'styled-components';
 import Logo from './logo.svg';
 
-import SecurityCard from './components/SecurityCard/SecurityCard';
+import SecurityCard from './components/SecurityCard';
+import StepCounter from './components/StepCounter';
+
+const LogoWrapper = styled.img`
+    position: fixed;
+    width: 90px;
+    left: 20px;
+    top: 20px;
+`;
 
 const StepHeadline = styled.div`
     color: #263238;
     font-weight: 500;
     font-size: 22px;
-    margin-bottom: 1.5em;
+    margin: 2em auto 2em auto;
 `;
 
 const Wrapper = styled.div`
     display: flex-inline;
     margin: 0 auto;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1150px) {
         max-width: 600px;
     }
 
-    @media (min-width: 1101px) {
+    @media (min-width: 1151px) {
         max-width: 100%;
     }
 `;
 
-const LogoWrapper = styled.img`
-    position: fixed;
-    width: 110px;
-    left: calc(50% - 55px);
-    top: 25px;
-`;
-
 function App() {
+    // set fixed values for step counter (for demo purposes)
+    const stepsCount = 4;
+    const currentStep = 3;
+
     return (
         <div className="App">
             <LogoWrapper src={Logo} alt="Trezor Logo" />
+
+            <StepHeadline>{currentStep}. Secure your Trezor</StepHeadline>
+            <StepCounter stepsCount={stepsCount} currentStep={currentStep} />
+
             <Wrapper>
-                <StepHeadline>Secure your Trezor 3/4</StepHeadline>
                 <SecurityCard />
                 <SecurityCard />
                 <SecurityCard />

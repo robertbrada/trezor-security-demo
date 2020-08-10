@@ -1,19 +1,14 @@
 /**
  * Component that tells the user to create a PIN for his Trezor device
- * Component has two basic states:
+ * Component has two main states:
  *   1) Show button to set the PIN
  *   2) PIN was successfully created
  */
 
 import * as React from 'react';
 import styled from 'styled-components';
-import PinIcon from '../../svg/PinIcon';
-import PinOkIcon from '../../svg/PinOkIcon';
-
-// styled-components code
-interface StyleProps {
-    pinSet: boolean;
-}
+import PinIcon from './svg/PinIcon';
+import PinOkIcon from './svg/PinOkIcon';
 
 const Button = styled.button`
     font-size: 16px;
@@ -66,7 +61,6 @@ const IconWrapper = styled.div`
     height: 75px;
     border-radius: 100%;
     border: 3px solid black;
-    // border: ${(props: StyleProps) => (props.pinSet ? '3px solid #00aa00' : '3px solid black')};
     display: flex;
     align-items: center;
     margin-bottom: 1.2em;
@@ -110,17 +104,26 @@ export class SecurityCard extends React.Component<{}, State> {
         pin: 123456,
     };
 
+    /**
+     * Sets the PIN variable and changes component state to 'pin successfully created'
+     */
     setPinHandler = () => {
+        // TODO set PIN value to this.state.pin
         this.setState({ pinSet: true });
     };
 
+    /**
+     * Shows the user PIN which he created
+     */
     showPinHandler = () => {
         this.setState({ showPin: true });
     };
 
-    render() {
-        // declare variables that we will use
-        const { pinSet } = this.state;
+    /**
+     * Function returns component content depending on the value of pinSet variable
+     * @param pinSet says if PIN was successfully
+     */
+    getContent = (pinSet: boolean) => {
         let icon, headline, description, button;
 
         // render the content depending on the value of 'pinSet' variable
@@ -146,9 +149,18 @@ export class SecurityCard extends React.Component<{}, State> {
             );
         }
 
+        return { icon, headline, description, button };
+    };
+
+    render() {
+        const { pinSet } = this.state;
+
+        // get component's content based on the 'pinSet' value
+        const { icon, headline, description, button } = this.getContent(pinSet);
+
         return (
             <Card>
-                <IconWrapper pinSet={pinSet}>{icon}</IconWrapper>
+                <IconWrapper>{icon}</IconWrapper>
                 <Headline>{headline}</Headline>
                 <Description>{description}</Description>
                 <VerticalLine />
