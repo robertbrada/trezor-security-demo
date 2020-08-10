@@ -1,6 +1,8 @@
 ## Description
-This project show example GUI for [Trezor](https://trezor.io/) wallet users. 
+This project show example GUI for [Trezor](https://trezor.io/) wallet. 
 The project was built using React and Typescript.
+
+![](./screenshot-demo.png)
 
 ## Installation
 
@@ -9,13 +11,13 @@ The project was built using React and Typescript.
     git clone https://github.com/robertbrada/trezor-security-demo.git
     ```
 
-2. Enter the directory and install the dependencies:
+2. Enter the directory and install the dependencies (make sure Typescript is installed on your machine):
     ```bash
     cd trezor-security-demo
     npm install
     ```
    
-3. Run the server and open http://localhost:3000 to view it in the browser:
+3. Run the server and open http://localhost:3000 to view the demo in the browser:
     ```bash
     npm run start
     ```
