@@ -6,10 +6,6 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (262b4497e3, 2020-09-04)"
-   sodipodi:docname="cover2.svg"
    id="svg832"
    version="1.1"
    viewBox="0 0 569.48749 800"
@@ -27,34 +23,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <sodipodi:namedview
-     inkscape:current-layer="svg832"
-     inkscape:window-maximized="1"
-     inkscape:window-y="1107"
-     inkscape:window-x="72"
-     inkscape:cy="543.17416"
-     inkscape:cx="84.248219"
-     inkscape:zoom="0.49875"
-     showgrid="false"
-     id="namedview834"
-     inkscape:window-height="1016"
-     inkscape:window-width="1848"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
-     inkscape:document-rotation="0"
-     showguides="true"
-     inkscape:guide-bbox="true"
-     inkscape:snap-nodes="true"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
   <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
   <title
      id="title615">login wall 1200</title>
@@ -277,7 +245,6 @@
          height="100%" />
     </mask>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient1557">
       <stop
          style="stop-color:#4c4b4b;stop-opacity:1"
@@ -311,7 +278,6 @@
          height="100%" />
     </mask>
     <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient1557"
        id="linearGradient9537"
        gradientUnits="userSpaceOnUse"
@@ -378,7 +344,6 @@
        x="145.64412"
        y="4602.3184"
        id="text6702"><tspan
-         sodipodi:role="line"
          id="tspan6700"
          x="145.64412"
          y="4602.3184"
@@ -1542,13 +1507,11 @@
           <path
              style="fill:#48b02c;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1249.2804,3086.241 v -113.3388 c 0,-0.7887 0.7285,-1.6257 1.6255,-1.6257 h 3.9889 c 0.8893,0 1.5713,0.9551 1.5713,1.704 v 113.2091 z"
-             id="path9261"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9261" />
           <path
              style="fill:#da5e60;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1256.4661,3086.1896 v -35.1043 c 0,-0.7886 0.7286,-1.6256 1.6256,-1.6256 h 3.9889 c 0.8892,0 1.5713,0.9551 1.5713,1.704 v 34.9744 z"
-             id="path9263"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9263" />
         </g>
         <g
            id="g9271"
@@ -1556,13 +1519,11 @@
           <path
              style="fill:#48b02c;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1342.7162,3086.241 v -39.6652 c 0,-0.7887 0.7286,-1.6256 1.6256,-1.6256 h 3.9888 c 0.8893,0 1.5714,0.9551 1.5714,1.7039 v 39.5355 z"
-             id="path9267"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9267" />
           <path
              style="fill:#da5e60;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1349.902,3086.1896 v -57.5389 c 0,-0.7886 0.7285,-1.6256 1.6256,-1.6256 h 3.9888 c 0.8893,0 1.5714,0.9551 1.5714,1.7039 v 57.4091 z"
-             id="path9269"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9269" />
         </g>
         <g
            aria-label="Account #1"
@@ -1897,13 +1858,11 @@
           <path
              style="fill:#48b02c;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1432.0177,3086.241 v -78.6531 c 0,-0.7886 0.7285,-1.6254 1.6256,-1.6254 h 3.9888 c 0.8893,0 1.5713,0.955 1.5713,1.7039 v 78.5232 z"
-             id="path9425"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9425" />
           <path
              style="fill:#da5e60;fill-opacity:1;stroke:none;stroke-width:0.69464px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 1439.2034,3086.1896 v -41.6809 c 0,-0.7886 0.7286,-1.6256 1.6256,-1.6256 h 3.9889 c 0.8893,0 1.5713,0.9551 1.5713,1.704 v 41.551 z"
-             id="path9427"
-             sodipodi:nodetypes="ccccccc" />
+             id="path9427" />
         </g>
         <g
            aria-label="Feb 2020"
